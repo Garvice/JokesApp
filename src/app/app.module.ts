@@ -4,17 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { JokeComponent } from './jokes/jokes.component'
+import { AppRoutingModule } from './app.routes';
+import { CopywriteComponent} from './copywrite.component';
+import { JokeModule } from './joke/joke.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    JokeComponent
+    CopywriteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    JokeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
